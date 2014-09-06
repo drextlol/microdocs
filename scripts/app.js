@@ -28,8 +28,10 @@ $(document).ready(function() {
 
     	if($(document).scrollTop() >= 300){
     		$("header").addClass('small');
+            $(".svg-logo").removeClass('big').addClass('mini');
     	}else{
     		$("header").removeClass('small');
+            $(".svg-logo").removeClass('mini').addClass('big');
     	}
 
 
