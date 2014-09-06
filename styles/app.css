@@ -6,33 +6,321 @@ body{
 }
 
 header{
-	width: 100%;
-	height: 220px;
-	padding: 33px 40px;
+	height: 155px;
+	padding: 20px;
+	position: fixed;
+	background: #323232;
+	z-index: 99999;
+	top: 0;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
 }
 
-.logo{
-	float: left;
-	background: #CCC;
+header .logo img{
+	width: 120px;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+
+header.small{
+	height: 98px;
+	padding: 20px 0px;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.9);
+	-moz-box-shadow:    2px 2px 5px 0px rgba(0, 0, 0, 0.9);
+	box-shadow:         2px 2px 5px 0px rgba(0, 0, 0, 0.9);
+}
+
+header.small .logo img{
+	width: 60px;
+}
+
+header > div{
+	height: 100%;
+}
+
+.logo{}
+
+.logo .src-image{
+	background: url("../images/logo.png") no-repeat;
+	width: 117px;
+	height: 111px;
+	display: block;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+
+header.small .src-image{
+	background: url("../images/logo-mini.png") no-repeat;
+	width: 63px;
+	height: 62px;
 }
 
 .menu{
-	float: left;
-	width: 720px;
-	margin: 71px 0px 71px 90px;
+	height: 100%;
+	display: table;
+	text-align: center;
+	margin-left: 11px;
 }
 
 .menu li{
-	display: inline-block;
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
 }
 
 .menu li a{
+	font-size: 13px;
+	font-family: "Gotham Light";
 	color: #FFFFFF;
 	text-transform: uppercase;
 	text-decoration: none;
-	padding: 0 20px;
+	text-align: center;
+	padding: 0px 10px;
+}
+
+.menu li a:hover{
+	text-decoration: underline;
 }
 
 .menu li .ctn-menu{
 	display: none;
+}
+
+.ctn-search{
+	position: relative;
+}
+
+.ctn-search .search{
+	font-family: "Gotham Light";
+	vertical-align: middle;
+	width: 100%;
+	height: 45px;
+	border: 0;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+	background: none;
+	margin: 33px 0;
+	padding: 0 20px 0 48px;
+	color: #FFFFFF;
+	font-size: 16px;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+
+header.small .ctn-search .search{
+	margin: 9px 0;
+}
+
+header.small .ctn-search .i-search{
+	top: 11px;
+}
+
+.ctn-search .i-search{
+	background-position: left center;
+	position: absolute;
+	left: 5px;
+	top: 37px;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+
+.social{
+	display: table;
+	height: 100%;
+}
+
+.lnk-social{
+	vertical-align: middle;
+	height: 100%;
+	display: table-cell;
+}
+
+.social a{
+	display: table-cell;
+	padding: 0 10px;
+}
+
+.social a.instagram{
+	background: url("../images/instagram.png") no-repeat;
+	width: 43px;
+	height: 43px;
+}
+
+.social a.facebook{
+	background: url("../images/facebook.png") no-repeat;
+	width: 43px;
+	height: 43px;
+}
+
+.ctn-content{
+	width: 100%;
+	margin-top: 155px;
+}
+
+.ctn-content .thumb-video{
+	opacity: 0;
+	width: 24%;
+	height: auto;
+	margin-left: 0.8%;
+	margin-top: 0.8%;
+	float: left;
+	overflow: hidden;
+	position: relative;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.ctn-content .thumb-video img{
+	width: 100%;
+}
+
+.ctn-content .thumb-video .caption{
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	background: #FFFFFF;
+	padding: 30px;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+
+.caption.inative{
+	bottom: -100%;
+}
+
+.caption.active{
+	bottom: 0;
+}
+
+.ctn-content .thumb-video.opacity{
+	opacity: 0.3 !important;
+}
+
+.ctn-content .thumb-video .caption .icons{
+	position: absolute;
+	display: table;
+	min-width: 70px;
+	right: 8px;
+	top: 19px;
+}
+
+.ctn-content .thumb-video .caption .play{
+	background: url("../images/play.png") no-repeat center center;
+	width: 21px;
+	height: 23px;
+	display: block;
+	position: absolute;
+	bottom: 12px;
+	right: 12px;
+}
+
+.ctn-content .thumb-video .caption .icons .likes{
+	background: url("../images/star.png") no-repeat center top;
+	display: table-cell;
+	line-height: 70px;
+	text-align: center;
+	width: 30px;
+}
+
+.ctn-content .thumb-video .caption .icons .comments{
+	background: url("../images/comments.png") no-repeat center 1px;
+	text-align: center;
+	display: table-cell;
+}
+
+.ctn-content .thumb-video .caption .text-image{
+	font-family: "Gotham Book";
+	line-height: 21px;
+	font-size: 12px;
+	width: 82%;
+	overflow: hidden;
+}
+
+.ctn-content .thumb-video .caption h1{
+	font-family: "Gotham Bold";
+	font-size: 15px;
+	color: #000000;
+	margin-bottom: 20px;
+}
+
+
+.ctn-content .ctn-load{
+	position: fixed;
+	bottom: 20px;
+	width: 100%;
+}
+
+.ctn-content .loading{
+	background: #000;
+	text-align: center;
+	color: #FFFFFF;
+	font-size: 15px;
+	width: 120px;
+	height: 33px;
+	margin: 0 auto;
+	position: relative;
+	line-height: 32px;
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+
+.ctn-content .loading.inative{
+	opacity: 0;
+}
+
+.ctn-content .loading.active{
+	opacity: 1;
+}
+
+@media screen and (max-width: 1000px){
+	.ctn-content .thumb-video {
+		width: 32.2%;
+	}
+}
+
+@media screen and (max-width: 770px){
+	.ctn-content .thumb-video {
+		width: 48.7%;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 523px){
+	.ctn-content .thumb-video {
+		margin-left: 2.5%;
+		margin-bottom: 2.5%;
+		width: 95%;
+		display: block;
+	}
+}
+
+@media screen and (max-width: 330px){
+	.ctn-content .thumb-video {
+		margin-left: 2.5%;
+		margin-bottom: 2.5%;
+		width: 95%;
+		display: block;
+	}
 }

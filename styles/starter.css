@@ -8,8 +8,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -20,7 +20,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -66,19 +66,22 @@ table {
     line-height: 0;
     height: 0;
 }
- 
+
 .clearfix {
     display: inline-block;
 }
- 
+
 html[xmlns] .clearfix {
     display: block;
 }
- 
+
 * html .clearfix {
     height: 1%;
 }
 
+*:focus{
+	outline: 0;
+}
 /* Grid Foundation */
 
 .row {
@@ -87,7 +90,6 @@ html[xmlns] .clearfix {
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
-    max-width: 62.5em;
 }
 .row:before, .row:after {
     content: " ";
@@ -497,7 +499,7 @@ html[xmlns] .clearfix {
         float: left;
     }
     .medium-1 {
-        width: 8.33333%;
+        width: 11.33333%;
     }
     .medium-2 {
         width: 16.66667%;
@@ -506,7 +508,7 @@ html[xmlns] .clearfix {
         width: 25%;
     }
     .medium-4 {
-        width: 33.33333%;
+        width: 34.33333%;
     }
     .medium-5 {
         width: 41.66667%;
