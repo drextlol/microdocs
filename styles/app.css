@@ -394,3 +394,80 @@ strong{
 .menu li .ctn-menu.ctn-contact{
 	width: 480px;
 }
+
+.movie-mask{
+	background: rgba(50, 50, 50, 0.9);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.movie-modal{
+	max-width: 943px;
+	height: 615px;
+	margin: 5% auto;
+}
+
+.movie-modal .mv-media{
+	background: #323232;
+	height: 100%;
+}
+
+.movie-modal .mv-lnk{
+	height: 100%;
+}
+
+.movie-modal .mv-info{
+	background: #FFFFFF;
+	height: 100%;
+	padding: 30px;
+}
+
+.movie-modal .mv-info h1{
+	font-family: "Gotham Medium";
+	margin-top: 5px;
+	margin-bottom: 30px;
+}
+
+.movie-modal .mv-info .mv-description{
+	font-family: "Gotham Book";
+	font-size: 12px;
+	line-height: 18px;
+	overflow: hidden;
+}
+
+.overflow{
+	overflow: hidden;
+}
+
+.num-social{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 15px;
+}
+
+.num-social .mv-likes{
+	background: url("../images/star.png") no-repeat top center;
+	color: #000000;
+	line-height: 70px;
+	text-align: center;
+	width: 30px;
+	float: left;
+	margin-right: 8px;
+}
+
+.num-social .mv-comments{
+	background: url("../images/comments.png") no-repeat center 2px;
+	line-height: 71px;
+	width: 30px;
+	color: #000000;
+	text-align: center;
+	float: left;
+}
