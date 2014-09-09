@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var feed = new Instafeed({
         get: 'tagged',
         tagName: 'streetmicrodocs',
-        clientId: '54eaeed855e0409ab7460814bae92ae0',
+        clientId: 'ba936763da8c47108329a3583b90b840',
         template: '<div class="thumb-video" data-src="{{model.videos.standard_resolution.url}}"><img src="{{image}}" alt="{{caption}}" /><div class="caption inative"><div class="icons"><span class="likes" title="Likes">{{likes}}</span><span class="comments" title="Comments">{{comments}}</span></div><h1>Street MicroDocs</h1><p class="text-image capt">{{caption}}</p><span class="play"></span></div></div>',
         resolution: 'low_resolution',
         limit: 12,
@@ -29,11 +29,17 @@ $(document).ready(function() {
     	if($(document).scrollTop() >= 300){
     		$("header").addClass('small');
             $(".svg-logo").removeClass('big').addClass('mini');
+            $(".menu").removeClass('big').addClass('mini');
     	}else{
     		$("header").removeClass('small');
             $(".svg-logo").removeClass('mini').addClass('big');
+            $(".menu").removeClass('mini').addClass('big');
     	}
 
+        if($(".menu").find('.ctn-menu.active')){
+            $('.ctn-menu.active').removeClass('active').addClass('hidden');
+            $(".ctn-search").removeClass('hidden');
+        }
 
     });
 
@@ -48,6 +54,20 @@ $(document).ready(function() {
     $(".menu").on('click', function(event) {
     	event.preventDefault();
     	/* Act on the event */
+    });
+
+    $(".lnk-menu").on('click', function(event) {
+        event.preventDefault();
+
+        $(this).closest('li').find('.ctn-menu').removeClass('hidden').addClass('active');
+        $(".ctn-search").addClass('hidden');
+    });
+
+    $(".close").on('click', function(event) {
+        event.preventDefault();
+
+        $(this).closest('.ctn-menu').removeClass('active').addClass('hidden');
+        $(".ctn-search").removeClass('hidden');
     });
 });
 

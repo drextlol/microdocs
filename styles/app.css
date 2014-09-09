@@ -51,12 +51,12 @@ header > div{
 
 .svg-logo.big{
 	width: 117px;
-	height: 111px;
+	height: auto;
 }
 
 .svg-logo.mini{
 	width: 63px;
-	height: 60px;
+	height: auto;
 }
 
 .logo{
@@ -68,6 +68,7 @@ header > div{
 	display: table;
 	text-align: center;
 	margin-left: 11px;
+	position: relative;
 }
 
 .menu li{
@@ -91,7 +92,49 @@ header > div{
 }
 
 .menu li .ctn-menu{
+	position: absolute;
+	top: 0px;
+	left: 0;
+	color: #FFFFFF;
+	text-align: left;
+	height: 100%;
+	background: #323232;
+	width: 720px;
+	max-width: 720px;
+	z-index: 99999;
+}
+
+.menu li .ctn-menu .men-text{
+	display: table-cell;
+	vertical-align: middle;
+	line-height: 18px;
+	font-size: 13px;
+}
+
+.menu.mini li .ctn-menu .men-text{
+	line-height: 13px;
+	font-size: 12px;
+}
+
+.menu li .ctn-menu .dv-close{
+	position: absolute;
+	display: table;
+	height: 100%;
+	width: 240px;
+	z-index: 99999;
+}
+
+.menu li .ctn-menu .dv-close .close{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.hidden{
 	display: none;
+}
+
+.ctn-menu.active{
+	display: table;
 }
 
 .ctn-search{
@@ -337,4 +380,17 @@ header.small .ctn-search .i-search{
 	color: #FFFFFF;
 	font-size: 17px;
 	font-family: "Gotham Book";
+}
+
+.tx-link{
+	text-decoration: underline;
+}
+
+strong{
+	font-family: "Gotham Book";
+	font-weight: 600;
+}
+
+.menu li .ctn-menu.ctn-contact{
+	width: 480px;
 }
