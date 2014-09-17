@@ -31,80 +31,50 @@
 
     <div id="page">
 
-        <header class="row">
-            <div class="medium-1 columns">
+        <header class="row normal">
+            <div class="small-3 columns">
                 <a href="./index.html" class="logo">
 					<img src="images/logo.svg" alt="Street Micro Docs" class="svg-logo big">
                 </a>
             </div>
 
-            <div class="medium-5 columns">
-                <ul class="menu">
-                    <li>
-                        <a href="#" class="lnk-menu">WHO WE ARE</a>
-                        <div class="ctn-menu hidden">
-                        	<div class="men-text">
-                            	WHO WE ARE - Street MicroDocs é um canal colaborativo de vídeos de artistas de rua do mundo inteiro.
-                            </div>
-                            <div class="dv-close"><a href="#" class="close">Voltar ao menu</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#" class="lnk-menu">WHAT WE WANT</a>
-                        <div class="ctn-menu hidden">
-                        	<div class="men-text">
-                            	WHAT WE WANT - Cultivar uma comunidade mundial que conecte artistas de rua, fãs e filmmakers;
-								Transitar o projeto Street MicroDocs por múltiplas plataformas: Instagram, Facebook, YouTube e TV;
-								Criar narrativas além dos 15 segundos previstos no Instagram. MicroDocs de 2 a 3 minutos que destaquem perfis de artistas de rua no mundo inteiro;
-								Promover festivais de arte nas ruas com a marca Street MicroDocs nas principais metrópoles mundiais;
-								Criar o 'chapéu virtual', um app que permita a remuneração dos artistas de rua por seus fãs, de qualquer lugar do mundo.
-                            </div>
-                            <div class="dv-close"><a href="#" class="close">Voltar ao menu</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#" class="lnk-menu">HOW IT WORKS</a>
-                        <div class="ctn-menu hidden">
-                        	<div class="men-text">
-                            	HOW IT WORKS - Envie o vídeo de 15s de seu artista de rua preferido para <span class="tx-link">video@streetmicrodocs.com.</span> Não esqueça de identificar o nome do artista/grupo e o endereço da gravação (rua, cidade, estado e país). Inclua as contas em redes sociais, tanto do artista quanto de quem filmou: Instagram, Twitter, Facebook e Site Oficial. Na sequência iremos produzir curtas de 2 a 3 minutos com os artistas de rua incluídos na galeria do Street MicroDocs.
-                            </div>
-                            <div class="dv-close"><a href="#" class="close">Voltar ao menu</a></div>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="#" class="lnk-menu">CONTACT</a>
-                        <div class="ctn-menu hidden ctn-contact">
-                        	<div class="men-text">
-                        		<strong>CONTACT</strong> <br/>
-                            	<strong>Daniel Bacchieri</strong> - Fundador e Curador - <span class="tx-link">danielbacchieri@gmail.com</span> <br />
-								<strong>Teodoro Marques</strong> - Diretor de Arte - <span class="tx-link">teo.tmd@gmail.com</span> <br />
-								<strong>Gustavo Mayer</strong> - Tecnologia - <span class="tx-link">gustavo@trin.ca</span> <br />
-                            </div>
-                            <div class="dv-close"><a href="#" class="close">Voltar ao menu</a></div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="medium-4 columns">
+            <div class="small-7 columns">
                 <div class="ctn-search">
                     <i class="i-search"></i>
                     <input type="text" class="search">
                 </div>
             </div>
-            <div class="medium-1 columns">
-                <div class="social">
-                    <div class="lnk-social">
-                        <a href="https://www.facebook.com/streetmicrodocs" target="_blank">
-                            <img src="images/facebook.png" height="29" width="29" alt="">
-                        </a>
-                        <a href="http://instagram.com/streetmicrodocs" target="_blank">
-                            <img src="images/instagram.png" height="29" width="29" alt="">
-                        </a>
-                    </div>
-                </div>
+
+            <div class="small-2 columns">
+            	<a href="#" class="menu"></a>
             </div>
         </header>
+
+        <div class="header-mobile">
+        	<div class="row">
+				<div class="small-4 columns">
+					<a href="#" class="menu-mobile"><img src="images/menu.svg" alt=""></a>
+				</div>
+				<div class="small-4 columns">
+					<a href="./index.html" class="lg-mobile"><img class="logo-mobile" src="images/logo.svg" alt="StreetMicroDocs"></a>
+				</div>
+
+				<div class="small-4 columns">
+					<a href="#" class="sr-mobile"><img src="images/search.png" alt="Buscar"></a>
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="row bg-search">
+				<div class="small-12 columns">
+					<div class="ctn-search">
+                    	<i class="i-search"></i>
+                    	<input type="text" class="search">
+                	</div>
+				</div>
+			</div>
+
+        </div>
 
         <div class="ctn-content">
             <div class="list" id="instafeed"></div>
@@ -112,23 +82,43 @@
                 <p class="loading inative">Loading...</p>
             </div>
         </div>
-        
+
         <div class="movie-mask hidden">
-            <div class="movie-modal row">
+            <div class="movie-modal row normal">
                 <div class="small-8 columns mv-media">
                     <video class="mv-lnk" controls preload="none" poster="">
                         <source class="mv-src" src="" type="video/mp4" />
                     </video>
                 </div>
                 <div class="small-4 columns mv-info">
+                	<a href="#" class="close-modal" title="Fechar"><img src="images/close.svg" alt="Fechar"></a>
                     <div class="num-social">
-                        <div class="mv-likes" title="Likes">000</div>
-                        <div class="mv-comments" title="Comments">000</div>
+                        <div class="mv-likes" title="Likes">0</div>
+                        <div class="mv-comments" title="Comments">0</div>
                         <div class="clear"></div>
                     </div>
                     <h1>Street MicroDocs</h1>
-                    <div class="mv-description">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    <div class="mv-description"></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="movie-modal row mobile hidden">
+                <div class="small-12 columns mv-media">
+                	<a href="#" class="close-modal" title="Fechar"><img src="images/close.svg" alt="Fechar"></a>
+                    <video class="mv-lnk" controls preload="none" poster="">
+                        <source class="mv-src" src="" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="small-12 columns">
+                	<div class="mv-info">
+                    <div class="num-social">
+                        <div class="mv-likes" title="Likes">0</div>
+                        <div class="mv-comments" title="Comments">0</div>
+                        <div class="clear"></div>
+                    </div>
+                    <h1>Street MicroDocs</h1>
+                    <div class="mv-description"></div>
                     </div>
                 </div>
                 <div class="clear"></div>
