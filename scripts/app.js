@@ -111,6 +111,41 @@ $(document).ready(function() {
             }, 500);
         }
     });
+
+    $(".menu-link a").on('mouseover', function(event) {
+        event.preventDefault();
+        
+        $(".menu-link a").addClass('nover');
+        $(this).removeClass('nover').addClass('hover');
+    }).mouseleave(function(event) {
+        $(".menu-link a").removeClass('nover hover')
+    });
+
+    $(".menu-link a").on('click', function(event) {
+        event.preventDefault();
+        
+        var clickDiv = $(this).data("text");
+
+        $(".menu-text > div").addClass('hidden');
+        $(".menu-text").find(clickDiv).removeClass('hidden');
+    });
+
+    $(".close-menu").on('click', function(event) {
+        event.preventDefault();
+        
+        $(".box-menu").addClass('hide');
+        $(".menu-text > div").removeClass('hidden').addClass('hidden');
+        $(".box-content").removeClass('active-menu');
+        $(".box-content header, .header-mobile").removeClass('active-menu');
+    });
+
+    $(".menu, .menu-mobile").on('click', function(event) {
+        event.preventDefault();
+        
+        $(".box-menu").removeClass('hide');
+        $(".box-content").addClass('active-menu');
+        $(".box-content header, .header-mobile").addClass('active-menu');
+    });
 });
 
 $(window).resize(function(event) {

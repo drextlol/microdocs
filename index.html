@@ -30,56 +30,90 @@
 <body>
 
     <div id="page">
+        
+        <div class="box-content">
+            <header class="row normal">
+                <div class="small-3 columns">
+                    <a href="./index.html" class="logo">
+    					<img src="images/logo.svg" alt="Street Micro Docs" class="svg-logo big">
+                    </a>
+                </div>
 
-        <header class="row normal">
-            <div class="small-3 columns">
-                <a href="./index.html" class="logo">
-					<img src="images/logo.svg" alt="Street Micro Docs" class="svg-logo big">
-                </a>
+                <div class="small-7 columns">
+                    <div class="ctn-search">
+                        <i class="i-search"></i>
+                        <input type="text" class="search">
+                    </div>
+                </div>
+
+                <div class="small-2 columns">
+                	<a href="#" class="menu"></a>
+                </div>
+            </header>
+
+            <div class="header-mobile">
+            	<div class="row">
+    				<div class="small-4 columns">
+    					<a href="#" class="menu-mobile"><img src="images/menu.svg" alt=""></a>
+    				</div>
+    				<div class="small-4 columns">
+    					<a href="./index.html" class="lg-mobile"><img class="logo-mobile" src="images/logo.svg" alt="StreetMicroDocs"></a>
+    				</div>
+
+    				<div class="small-4 columns">
+    					<a href="#" class="sr-mobile"><img src="images/search.png" alt="Buscar"></a>
+    					<div class="clear"></div>
+    				</div>
+    			</div>
+
+    			<div class="row bg-search">
+    				<div class="small-12 columns">
+    					<div class="ctn-search">
+                        	<i class="i-search"></i>
+                        	<input type="text" class="search">
+                    	</div>
+    				</div>
+    			</div>
             </div>
 
-            <div class="small-7 columns">
-                <div class="ctn-search">
-                    <i class="i-search"></i>
-                    <input type="text" class="search">
+            <div class="ctn-content">
+                <div class="list" id="instafeed"></div>
+                <div class="ctn-load">
+                    <p class="loading inative">Loading...</p>
                 </div>
             </div>
-
-            <div class="small-2 columns">
-            	<a href="#" class="menu"></a>
-            </div>
-        </header>
-
-        <div class="header-mobile">
-        	<div class="row">
-				<div class="small-4 columns">
-					<a href="#" class="menu-mobile"><img src="images/menu.svg" alt=""></a>
-				</div>
-				<div class="small-4 columns">
-					<a href="./index.html" class="lg-mobile"><img class="logo-mobile" src="images/logo.svg" alt="StreetMicroDocs"></a>
-				</div>
-
-				<div class="small-4 columns">
-					<a href="#" class="sr-mobile"><img src="images/search.png" alt="Buscar"></a>
-					<div class="clear"></div>
-				</div>
-			</div>
-
-			<div class="row bg-search">
-				<div class="small-12 columns">
-					<div class="ctn-search">
-                    	<i class="i-search"></i>
-                    	<input type="text" class="search">
-                	</div>
-				</div>
-			</div>
-
         </div>
 
-        <div class="ctn-content">
-            <div class="list" id="instafeed"></div>
-            <div class="ctn-load">
-                <p class="loading inative">Loading...</p>
+        <div class="box-menu hide">
+            <a href="#" class="close-menu"></a>
+
+            <div class="menu-social">
+                <a class="left" href="#">Instagram</a>
+                <a class="left" href="#">Facebook</a>
+                <a class="right" href="#">Email</a>
+                <div class="clearfix"></div>
+            </div>
+
+            <div class="menu-link">
+                <a href="#" data-text=".who">WHO WE ARE</a><br />
+                <a href="#" data-text=".what">WHAT WE DO</a><br />
+                <a href="#" data-text=".how">HOW IT WORKS</a><br />
+                <a href="#" data-text=".part">PARTCIPATE</a>
+            </div>
+
+            <div class="menu-text">
+                <div class="who hidden">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <div class="what hidden">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <div class="how hidden">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <div class="part hidden">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
             </div>
         </div>
 
@@ -91,7 +125,7 @@
                     </video>
                 </div>
                 <div class="small-4 columns mv-info">
-                	<a href="#" class="close-modal" title="Fechar"><img src="images/close.svg" alt="Fechar"></a>
+                	<a href="#" class="close-modal" title="Fechar"><img src="images/close-modal.png" alt="Fechar"></a>
                     <div class="num-social">
                         <div class="mv-likes" title="Likes">0</div>
                         <div class="mv-comments" title="Comments">0</div>
@@ -105,7 +139,7 @@
 
             <div class="movie-modal row mobile hidden">
                 <div class="small-12 columns mv-media">
-                	<a href="#" class="close-modal" title="Fechar"><img src="images/close.svg" alt="Fechar"></a>
+                	<a href="#" class="close-modal" title="Fechar"><img src="images/close-modal.png" alt="Fechar"></a>
                     <video class="mv-lnk" controls preload="none" poster="">
                         <source class="mv-src" src="" type="video/mp4" />
                     </video>
