@@ -3,6 +3,7 @@ body{
 	font-size: 14px;
 	font-weight: normal;
 	background: #323232;
+	height: 100%;
 }
 
 header{
@@ -41,6 +42,9 @@ header > div{
 	height: 100%;
 }
 
+#page{
+	position: absolute;
+}
 .left{
 	float: left;
 }
@@ -278,13 +282,17 @@ header.small .ctn-search .i-search{
 }
 
 .ctn-content .thumb-video .caption .play{
-	background: url("../images/play.png") no-repeat center center;
+	background: url("../images/play.png") no-repeat bottom right;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
 	width: 100%;
-	height: 50px;
+	height: 30px;
 	display: block;
 	position: absolute;
-	bottom: 50px;
-	left: 0;
+	bottom: 10px;
+	left: -10px;
 }
 
 .ctn-content .thumb-video .caption .icons .likes{
@@ -426,6 +434,8 @@ strong{
 	font-size: 12px;
 	line-height: 18px;
 	overflow: hidden;
+	z-index: 99999;
+	position: relative;
 }
 
 .overflow{
@@ -589,20 +599,31 @@ strong{
 
 .box-menu{
 	background: #4C4C4C;
-	width: 30%;
+	width: 480px;
 	height: 100%;
-	overflow: hidden;
-	display: block;
 	position: fixed;
 	right: 0;
 	top: 0;
+	bottom: auto;
+	z-index: 99999;
+	overflow: auto;
+	-webkit-backface-visibility: hidden; /*Most Important*/
+	backface-visibility: hidden; /*Most Important*/
 	-webkit-transition: all 0.4s linear;
 	-moz-transition: all 0.4s linear;
 	-o-transition: all 0.4s linear;
 	transition: all 0.4s linear;
 }
+
+.tpl-mobile .box-menu.hide,
 .box-menu.hide{
-	width: 0;
+	right: -480px;
+	opacity: 0;
+}
+
+.tpl-mobile .box-menu{
+	opacity: 1;
+	width: 100%;
 }
 
 .close-menu{

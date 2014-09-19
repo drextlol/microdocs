@@ -1,0 +1,11 @@
+SetEnvIfNoCase Request_URI \.(?:ogv|ogg|oga|m4v|mp4|m4a|mp3|wav|webma?|webmv)$ no-gzip dont-vary  
+  
+AddType video/ogg .ogv  
+AddType video/mp4 .m4v .mp4  
+AddType video/webm .webm .webmv  
+  
+AddType audio/mpeg .mp3  
+AddType audio/mp4 .m4a  
+AddType audio/ogg .ogg .oga  
+AddType audio/webm .webma  
+AddType audio/wav .wav

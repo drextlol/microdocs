@@ -4,7 +4,7 @@ $(document).ready(function() {
         get: 'tagged',
         tagName: 'streetmicrodocs',
         clientId: 'ba936763da8c47108329a3583b90b840',
-        template: '<div class="thumb-video" data-src="{{model.videos.standard_resolution.url}}" data-likes="{{likes}}" data-comments="{{comments}}" data-poster="{{model.images.standard_resolution.url}}" data-description="{{caption}}"><img src="{{image}}" alt="{{caption}}" /><div class="caption inative"><div class="icons"><span class="likes" title="Likes">{{likes}}</span><span class="comments" title="Comments">{{comments}}</span></div><h1>Street MicroDocs</h1><p class="text-image capt">{{caption}}</p><span class="play"></span></div></div>',
+        template: '<div class="thumb-video" data-src="{{model.videos.standard_resolution.url}}" data-likes="{{likes}}" data-comments="{{comments}}" data-poster="{{model.images.standard_resolution.url}}" data-description="{{caption}}"><img src="{{image}}" alt="{{caption}}" /><div class="caption inative"><div class="icons"><span class="likes" title="Likes">{{likes}}</span><span class="comments" title="Comments">{{comments}}</span></div><h1>StreetMicroDocs</h1><p class="text-image capt">{{caption}}</p><span class="play"></span></div></div>',
         resolution: 'low_resolution',
         limit: 12,
         sortBy: "random",
@@ -23,7 +23,9 @@ $(document).ready(function() {
     	documentHeight = ($(document).height() - $(window).height());
 
     	if($(document).scrollTop() >= documentHeight){
-    		feed.next();
+    		if(!$(".ctn-content").hasClass('filtrando')){
+                feed.next();
+            }
     	}
 
     	if($(document).scrollTop() >= 300){
@@ -43,6 +45,16 @@ $(document).ready(function() {
         if($(".menu").find('.ctn-menu.active')){
             $('.ctn-menu.active').removeClass('active').addClass('hidden');
             $(".ctn-search").removeClass('hidden');
+        }
+    });
+    
+    $(".search").on("keyup", function(e) {
+        if($(this).val() != ""){
+            if(!$(".ctn-content").hasClass('filtrando')){
+                $(".ctn-content").addClass('filtrando');
+            }
+        }else{
+            $(".ctn-content").removeClass('filtrando');
         }
     });
 
@@ -134,19 +146,18 @@ $(document).ready(function() {
         event.preventDefault();
         
         $(".box-menu").addClass('hide');
+        $("body").removeClass('overflow');
         $(".menu-text > div").removeClass('hidden').addClass('hidden');
-        $(".box-content").removeClass('active-menu');
-        $(".box-content header, .header-mobile").removeClass('active-menu');
     });
 
     $(".menu, .menu-mobile").on('click', function(event) {
         event.preventDefault();
         
+        $("body").addClass('overflow');
         $(".box-menu").removeClass('hide');
-        $(".box-content").addClass('active-menu');
-        $(".box-content header, .header-mobile").addClass('active-menu');
     });
 });
+// Fim document
 
 $(window).resize(function(event) {
     modalStyle();
@@ -199,7 +210,6 @@ function closeMovie(){
 
 function mouseOverThumb(){
     if(!$("body").hasClass('tpl-mobile')){
-        console.log($("body").hasClass('tpl-mobile'));
         $(".thumb-video").on("mouseover", function(event) {
             $(".thumb-video").addClass('opacity');
             $(this).find(".caption").removeClass('inative').addClass('active');
@@ -226,7 +236,8 @@ function init(){
     mouseOverThumb();
 
     var options = {
-	  valueNames: ['capt']
+	  valueNames: ['capt'],
+      indexAsync: true
 	};
 
 	var userList = new List('page', options);
@@ -247,11 +258,11 @@ function init(){
         $("html, body").addClass('overflow');
         $(".movie-mask .mv-lnk").attr("poster", dadosMovie.posterUrl);
         $(".movie-mask .mv-src").attr("src", dadosMovie.videoUrl);
-        $(".movie-mask .mv-lnk").load();
         $(".movie-mask .mv-lnk").attr({"preload":"auto", "autoplay": false});
         $(".movie-mask .mv-likes").text(dadosMovie.likesQtd);
         $(".movie-mask .mv-comments").text(dadosMovie.commentsQtd);
         $(".movie-mask .mv-description").text(dadosMovie.captionText);
         $(".movie-mask").removeClass('hidden');
+        $(".movie-mask .mv-lnk").load();
     });
 }
