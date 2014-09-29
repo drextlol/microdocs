@@ -56,6 +56,15 @@ $(document).ready(function() {
         }else{
             $(".ctn-content").removeClass('filtrando');
         }
+
+        if($(".list > *").size() == ""){
+            if($(".not-found").size() == 0){
+                $(".ctn-content.filtrando").append('<img src="images/not-found.png" class="not-found" alt="Try Again">');
+            }
+        }else{
+            $(".not-found").remove();
+        }
+
     });
 
     modalStyle();
@@ -124,22 +133,22 @@ $(document).ready(function() {
         }
     });
 
-    $(".menu-link a").on('mouseover', function(event) {
+    $(".menu-link > a").on('mouseover', function(event) {
         event.preventDefault();
         
-        $(".menu-link a").addClass('nover');
+        $(".menu-link > a").addClass('nover');
         $(this).removeClass('nover').addClass('hover');
     }).mouseleave(function(event) {
-        $(".menu-link a").removeClass('nover hover')
+        $(".menu-link > a").removeClass('nover hover')
     });
 
-    $(".menu-link a").on('click', function(event) {
+    $(".menu-link > a").on('click', function(event) {
         event.preventDefault();
         
         var clickDiv = $(this).data("text");
 
-        $(".menu-text > div").addClass('hidden');
-        $(".menu-text").find(clickDiv).removeClass('hidden');
+        $(".menu-link > div").addClass('hidden');
+        $(".menu-link").find(clickDiv).removeClass('hidden');
     });
 
     $(".close-menu").on('click', function(event) {
@@ -147,7 +156,7 @@ $(document).ready(function() {
         
         $(".box-menu").addClass('hide');
         $("body").removeClass('overflow');
-        $(".menu-text > div").removeClass('hidden').addClass('hidden');
+        $(".menu-link > div").removeClass('hidden').addClass('hidden');
     });
 
     $(".menu, .menu-mobile").on('click', function(event) {

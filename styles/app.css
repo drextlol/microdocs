@@ -8,7 +8,7 @@ body{
 
 header{
 	height: 155px;
-	padding: 20px;
+	padding: 26px 20px 20px 20px;
 	position: fixed;
 	background: #323232;
 	z-index: 99999;
@@ -42,8 +42,13 @@ header > div{
 	height: 100%;
 }
 
+i{
+	font-style: italic;
+}
+
 #page{
 	position: absolute;
+	width: 100%;
 }
 .left{
 	float: left;
@@ -61,8 +66,8 @@ header > div{
 }
 
 .svg-logo.big{
-	width: 117px;
-	height: auto;
+	width: auto;
+	height: 100%;
 }
 
 .svg-logo.mini{
@@ -73,15 +78,17 @@ header > div{
 .logo{
 	color: #323232;
 	display: inline-block;
+	height: 90%;
+	margin: 6px 5px 0px 8px;
 }
 
 .menu{
 	background: url("../images/menu.png") no-repeat center center;
-	width: 30px;
+	width: 47px;
 	height: 100%;
 	display: table;
 	text-align: center;
-	margin: 0 11px;
+	margin: 0 65px 0 0px;
 	position: relative;
 	float: right;
 }
@@ -165,7 +172,7 @@ header > div{
 	border-top: 1px solid #FFFFFF;
 	border-bottom: 1px solid #FFFFFF;
 	background: none;
-	margin: 33px 0;
+	margin: 34px 0;
 	padding: 0 20px 0 48px;
 	color: #FFFFFF;
 	font-size: 16px;
@@ -487,6 +494,7 @@ strong{
 	height: auto;
 	display: inline-block;
 	margin: 26px 7px;
+	float: right;
 }
 
 .header-mobile .ctn-search .search{
@@ -529,11 +537,13 @@ strong{
 	height: auto;
 	display: inline-block;
 	margin: 24px 10px;
-	float: right;
+	float: left;
 }
 
 .header-mobile .sr-mobile img{
-
+	top: 5px;
+	position: relative;
+	left: 0px;
 }
 
 .movie-modal.mobile{
@@ -557,12 +567,14 @@ strong{
 }
 
 .movie-modal.mobile .close-modal{
+	background: #323232;
+	padding: 10px;
 	width: auto;
 	height: auto;
 	display: inline-block;
 	position: absolute;
-	top: 7px;
-	right: 20px;
+	top: 3px;
+	right: 16px;
 	z-index: 99999;
 }
 
@@ -599,7 +611,7 @@ strong{
 
 .box-menu{
 	background: #4C4C4C;
-	width: 480px;
+	width: 25%;
 	height: 100%;
 	position: fixed;
 	right: 0;
@@ -619,15 +631,17 @@ strong{
 .box-menu.hide{
 	right: -480px;
 	opacity: 0;
+	visibility: hidden;
 }
 
 .tpl-mobile .box-menu{
 	opacity: 1;
 	width: 100%;
+	visibility: visible;
 }
 
 .close-menu{
-	background: url("../images/close-menu.png") no-repeat;
+	background: url("../images/close-menu.png") no-repeat center center;
 	width: 24px;
 	height: 24px;
 	display: block;
@@ -679,9 +693,45 @@ strong{
 	color: #FFFFFF;
 }
 
+.list{
+	width: 100%;
+}
+
+.ctn-tx{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	color: #FFFFFF;
+	line-height: 21px;
+	font-size: 11px;
+}
+
+.ctn-tx a{
+	text-decoration: underline;
+}
+
+.not-found{
+	margin: 40% auto 20px auto;
+	width: 82px;
+	height:58px;
+	display: block;
+}
+
 @media screen and (max-width: 1000px){
 	.ctn-content .thumb-video {
 		width: 32.2%;
+	}
+
+	.box-menu{
+		width: 33.2%;
+	}
+
+	.ctn-search{
+		margin-left: 42px;
+	}
+
+	.menu{
+		float: none;
+		margin: 0 auto;
 	}
 }
 
@@ -693,6 +743,10 @@ strong{
 
 	.ctn-content{
 		margin-top: 85px;
+	}
+	
+	.ctn-search{
+		margin-left: 0;
 	}
 
 	header.normal{
