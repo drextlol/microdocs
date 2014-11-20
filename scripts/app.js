@@ -1,13 +1,12 @@
 $(document).ready(function() {
 
 	var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'streetmicrodocs',
-        clientId: 'ba936763da8c47108329a3583b90b840',
+        get: 'user',
+        userId: 1028760904,
+        accessToken: '1028760904.5b9e1e6.8361bb9e8a01490780e0e08ee61f12b1',
         template: '<div class="thumb-video" data-src="{{model.videos.standard_resolution.url}}" data-likes="{{likes}}" data-comments="{{comments}}" data-poster="{{model.images.standard_resolution.url}}" data-description="{{caption}}"><img src="{{image}}" alt="{{caption}}" /><div class="caption inative"><div class="icons"><span class="likes" title="Likes">{{likes}}</span><span class="comments" title="Comments">{{comments}}</span></div><h1>StreetMicroDocs</h1><p class="text-image capt">{{caption}}</p><span class="play"></span></div></div>',
         resolution: 'low_resolution',
         limit: 12,
-        sortBy: "random",
         before: function(){
         	$(".loading").removeClass('inative').addClass('active');
         },
@@ -48,7 +47,7 @@ $(document).ready(function() {
         }
     });
     
-    $(".search").on("keyup", function(e) {
+    $(document).on("input paste", ".search", function(e) {
         if($(this).val() != ""){
             if(!$(".ctn-content").hasClass('filtrando')){
                 $(".ctn-content").addClass('filtrando');

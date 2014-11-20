@@ -28,7 +28,7 @@ header .logo img{
 
 header.small{
 	height: 98px;
-	padding: 18px 0px;
+	padding: 12px 0px;
 	-webkit-transition: all 0.4s linear;
 	-moz-transition: all 0.4s linear;
 	-o-transition: all 0.4s linear;
@@ -716,6 +716,61 @@ strong{
 	display: block;
 }
 
+.table{
+	display: table;
+	height: 100%;
+}
+
+.concept{
+	display: table-cell;
+	vertical-align: middle;
+	padding-right: 60px;
+	color: #FFF;
+	line-height: 20px;
+	font-size: 13px;
+}
+
+.concept i{
+	font-style: italic;
+}
+
+.imaps{
+	display: table-cell;
+	vertical-align: middle;
+	width: 218px;
+}
+
+.imaps a:hover{
+	opacity: 0.8;
+}
+
+.imaps .img-map{
+	float: left;
+	width: 23px;
+	height: auto;
+}
+
+.imaps .title{
+	font-size: 13px;
+	color: #FFF;
+	font-weight: 600;
+	float: left;
+	line-height: 37px;
+	margin-left: 10px;
+}
+
+.beta{
+	text-align: center;
+	display: inline-block;
+	color: #FFF;
+	text-transform: uppercase;
+}
+
+.imapmobile{
+	margin: 14% auto;
+	display: inline-block;
+}
+
 @media screen and (max-width: 1000px){
 	.ctn-content .thumb-video {
 		width: 32.2%;
@@ -732,6 +787,16 @@ strong{
 	.menu{
 		float: none;
 		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 810px){
+	.concept{
+		font-size: 12px;
+	}
+
+	.beta{
+		display: none;
 	}
 }
 
@@ -775,3 +840,4 @@ strong{
 		display: block;
 	}
 }
+
